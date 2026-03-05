@@ -26,12 +26,14 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+The game's purpose is to let users guess a secret number within a certain range, with hints provided after each guess to help them find the correct answer. The difficulty number changes the range and number of allowed attempts.
 - [ ] Detail which bugs you found.
+The main bugs I found were: the hints for "higher" and "lower" were reversed, the secret number kept changing unexpectedly, the difficulty ranges were inconsistent, and guesses outside the allowed range didn't show an error. 
 - [ ] Explain what fixes you applied.
+I fixed these by correcting the hint logic, using Streamlit's session state to keep the secret number stable, enforcing the correct range for each difficulty, and showing errors for out-of-range guesses. I also refactored the main logic into `logic_utils.py` and wrote pytest cases to confirm all fixes. 
 
 ## 📸 Demo
-
-- [ ] [Insert a screenshot of your fixed, winning game here]
+![alt text](image-1.png)
 
 ## 🚀 Stretch Features
 
