@@ -38,6 +38,13 @@ def check_guess(guess, secret):
     """
     # FIX: Refactored logic into logic_utils.py using Copilot Agent mode
     # FIX: Flipped prompts for higher/lower fixed by Copilot and user
+    # Ensure both guess and secret are integers for comparison
+    if isinstance(secret, str):
+        try:
+            secret = int(secret)
+        except Exception:
+            return "Error", "Secret value is invalid."
+
     if guess == secret:
         return "Win", "🎉 Correct!"
 
